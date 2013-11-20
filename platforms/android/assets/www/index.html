@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bento Budget</title>
+  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+  <!--Omit width=device-width for iPhone 5 -->
+  <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <link rel="stylesheet" href="jqm/jquery.mobile-1.3.2.css" />
+  <link rel="stylesheet" href="css/application.css" />
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="content"> 
+          <img id="logo" src="img/logo-small.png" alt="Bento Budget Logo"/>
+          <div id="errors"></div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" />
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" />
+          <input type="checkbox" id="remember"/><label for="remember">Remember Me</label>
+          <input id="signin" data-theme="a" name="commit" type="button" value="Signin" />
+    </div><!-- /content -->
+  </div><!-- /page -->
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script type='application/javascript' src="js/fastclick.js"></script>
+  <script src="js/application.js"></script>
+  <script type="text/javascript">
+    app.init();
+  </script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="jqm/jquery.mobile-1.3.2.js"></script>
+</body>
+</html>
