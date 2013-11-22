@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C51D0A01-3618-4829-8947-8F84B283CB66</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bento</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB8FF98A-6554-48D8-B3BA-0062861FAD17</key>
+		<string>ssh://bitbucket.org/bradyholt/bentobudget-mobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/Bento.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB8FF98A-6554-48D8-B3BA-0062861FAD17</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://bitbucket.org/bradyholt/bentobudget-mobile.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB8FF98A-6554-48D8-B3BA-0062861FAD17</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB8FF98A-6554-48D8-B3BA-0062861FAD17</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bento-mobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>

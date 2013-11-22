@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mobile.bentobudget" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Bento Budget</name>
+<widget id="com.mobile.bentobudget" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Bento</name>
     <description>
        Bento Budget
     </description>
-    <author email="bentobudget@bentobudget.com" href="http://www.bentobudget.com">
+    <author email="support@bentobudget.com" href="http://www.bentobudget.com">
         Bento Budget
     </author>
     <access origin="*" />

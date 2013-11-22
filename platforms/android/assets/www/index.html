@@ -6,29 +6,75 @@
   <!--Omit width=device-width for iPhone 5 -->
   <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
   <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <link rel="stylesheet" href="jqm/jquery.mobile-1.3.2.css" />
+  <link rel="stylesheet" href="jqm/bento.css" />
+  <link rel="stylesheet" href="jqm/jquery.mobile.structure-1.3.2.css" />
   <link rel="stylesheet" href="css/application.css" />
 </head>
 <body>
-  <div data-role="page">
+  <div id="login" data-role="page">
     <div data-role="content"> 
-          <img id="logo" src="img/logo-small.png" alt="Bento Budget Logo"/>
-          <div id="errors"></div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="text" />
-          <label for="password">Password</label>
-          <input id="password" name="password" type="password" />
-          <input type="checkbox" id="remember"/><label for="remember">Remember Me</label>
-          <input id="signin" data-theme="a" name="commit" type="button" value="Signin" />
+      <img id="logo" src="img/logo-small.png" alt="Bento Budget Logo"/>
+      <hr/>
+      <div id="errors"></div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="text" />
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" />
+      <input type="checkbox" id="remember"/><label for="remember">Remember Me</label>
+      <input id="signin" data-theme="b" name="commit" type="button" value="Sign In" />
+    </div><!-- /content -->
+  </div><!-- /page -->
+  <div id="envelopes" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a data-theme="b" class="ui-btn-active ui-state-persist" href="#envelopes">Envelopes</a></li>
+          <li><a href="#accounts">Accounts</a></li>
+          <li><a href="#login">Sign Out</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="content"> 
+      <ul id="envelope-list" data-role="listview">
+        <!-- populated with json -->
+      </ul>
+    </div><!-- /content -->
+  </div><!-- /page -->
+  <div id="transactions" data-role="page">
+    <div data-role="header" data-theme="b" data-position="fixed">
+      <a href="#envelopes" data-icon="arrow-l">Back</a>
+      <h1>Transactions</h1>
+    </div><!-- /header -->
+    <div data-role="content"> 
+      <ul id="transaction-list" data-role="listview">
+        <!-- populated with json -->
+      </ul>
+    </div><!-- /content -->
+  </div><!-- /page -->
+  <div id="accounts" data-role="page">
+    <div data-role="footer"> 
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#envelopes">Envelopes</a></li>
+          <li><a data-theme="b" class="ui-btn-active ui-state-persist" href="#accounts">Accounts</a></li>
+          <li><a href="#login">Sign Out</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="content"> 
+      <ul id="account-list" data-role="listview">
+       <!-- populated with json -->
+      </ul>
     </div><!-- /content -->
   </div><!-- /page -->
   <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/underscore-min.js"></script>
   <script type='application/javascript' src="js/fastclick.js"></script>
   <script src="js/application.js"></script>
   <script type="text/javascript">
-    app.init();
+  app.init();
   </script>
-  <script type="text/javascript" src="cordova.js"></script>
+  <!--<script type="text/javascript" src="cordova.js"></script>-->
   <script src="jqm/jquery.mobile-1.3.2.js"></script>
 </body>
 </html>
