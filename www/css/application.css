@@ -1,3 +1,8 @@
 #logo { margin-left: auto; margin-right: auto; display:block; }
-#errors { background-color: #f2cece; padding: 10px; color: #a52020; border-radius: 5px; display:none; margin: 5px 5px 20px 5px;}
+#message { padding: 10px; border-radius: 5px; display:none; margin: 5px 5px 20px 5px; }
+#message.error { background-color: #f2cece; color: #a52020; }
+#message.info { background-color: #d9edf7; color: #3a87ad; }
 .negative { color: #ff0000;}
+#edit_transaction_description { font-weight: bold; margin: 0px 0 15px 0;}
+.ui-li-has-count .ui-li-count { font-size: 15px;}
+#login_content { background-color: #ffffff;}

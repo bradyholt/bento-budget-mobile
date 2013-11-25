@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mobile.bentobudget" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Bento</name>
+<widget id="com.mobile.bentobudget" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Bento Budget</name>
     <description>
-       Bento Budget
+       Bento Budget helps you take control of your money.  Whether you don't already have a budget, don't stick to one or are frustrated with your current budgeting solution, Bento Budget is simple yet powerful budgeting software, based on the proven Envelope method of budgeting.
     </description>
     <author email="support@bentobudget.com" href="http://www.bentobudget.com">
         Bento Budget

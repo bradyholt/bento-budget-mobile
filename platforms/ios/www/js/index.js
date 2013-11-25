@@ -45,20 +45,5 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    },
-    foo: function() {
-        $.ajax({
-            url: "http://localhost:3000/sessions.json",
-            type: "POST",
-            dataType: 'json',
-            data: { email: "brady.holt@gmail.com", password: "12345678" },
-            success: function(data){
-                alert('good');
-            },
-            error: function(data){
-                console.log(data);
-                alert('bad');
-            }
-        });
     }
 };

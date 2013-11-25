@@ -8,73 +8,130 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <link rel="stylesheet" href="jqm/bento.css" />
   <link rel="stylesheet" href="jqm/jquery.mobile.structure-1.3.2.css" />
+  <link rel="stylesheet" href="jqm/jqm-icon-pack-2.0-original.css" />
   <link rel="stylesheet" href="css/application.css" />
 </head>
 <body>
   <div id="login" data-role="page">
-    <div data-role="content"> 
+    <div data-role="content" id="login_content"> 
       <img id="logo" src="img/logo-small.png" alt="Bento Budget Logo"/>
       <hr/>
-      <div id="errors"></div>
-      <label for="email">Email</label>
-      <input id="email" name="email" type="text" />
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" />
-      <input type="checkbox" id="remember"/><label for="remember">Remember Me</label>
-      <input id="signin" data-theme="b" name="commit" type="button" value="Sign In" />
+      <div id="message"></div>
+      <form id="login_form" data-ajax="false">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" />
+        <input type="checkbox" id="remember"/><label for="remember">Remember Me</label>
+        <input id="signin" data-theme="b" name="commit" type="submit" value="Sign In" />
+      </form>
     </div><!-- /content -->
   </div><!-- /page -->
   <div id="envelopes" data-role="page">
     <div data-role="header" data-position="fixed">
-      <div data-role="navbar">
-        <ul>
-          <li><a data-theme="b" class="ui-btn-active ui-state-persist" href="#envelopes">Envelopes</a></li>
-          <li><a href="#accounts">Accounts</a></li>
-          <li><a href="#login">Sign Out</a></li>
-        </ul>
-      </div>
+      <a data-role="button" data-icon="power" href="#login" class="ui-btn-right logout">
+        Logout
+      </a>
+      <h1>Envelopes</h1>
     </div>
     <div data-role="content"> 
       <ul id="envelope-list" data-role="listview">
         <!-- populated with json -->
       </ul>
     </div><!-- /content -->
+    <div data-role="footer" data-position="fixed" data-theme="d"> 
+      <div data-role="navbar"> 
+        <ul> 
+          <li><a href="#envelopes" class="ui-btn-active ui-state-persist" data-icon="email">Envelopes</a></li> 
+          <li><a href="#accounts" data-icon="page">Accounts</a></li> 
+        </ul> 
+      </div> 
+    </div> 
   </div><!-- /page -->
   <div id="transactions" data-role="page">
-    <div data-role="header" data-theme="b" data-position="fixed">
+    <div data-role="header" data-position="fixed">
       <a href="#envelopes" data-icon="arrow-l">Back</a>
-      <h1>Transactions</h1>
+      <select data-mini="true" data-inline="true" class="ui-btn-right" id="transaction_list_days">
+        <option selected value="30">30 days</option>
+        <option value="90">3 months</option>
+        <option value="180">6 months</option>
+        <option value="365">1 year</option>
+        <option value="">All</option>
+      </select>
+      <h1 id="transactions_header">Transactions</h1>
     </div><!-- /header -->
     <div data-role="content"> 
       <ul id="transaction-list" data-role="listview">
         <!-- populated with json -->
       </ul>
     </div><!-- /content -->
+     <div data-role="footer" data-position="fixed" data-theme="d"> 
+      <div data-role="navbar"> 
+        <ul> 
+          <li><a href="#envelopes" class="" data-icon="email">Envelopes</a></li> 
+          <li><a href="#accounts" data-icon="page">Accounts</a></li> 
+        </ul> 
+      </div> 
+    </div> 
   </div><!-- /page -->
-  <div id="accounts" data-role="page">
-    <div data-role="footer"> 
-      <div data-role="navbar">
-        <ul>
-          <li><a href="#envelopes">Envelopes</a></li>
-          <li><a data-theme="b" class="ui-btn-active ui-state-persist" href="#accounts">Accounts</a></li>
-          <li><a href="#login">Sign Out</a></li>
-        </ul>
+  <div id="edit_transaction" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h1>Edit</h1>
+    </div><!-- /header -->
+    <div data-role="content"> 
+      <div id="edit_transaction_description">
       </div>
+      <form id="edit_transaction_form" data-ajax="false">
+        <label for="transaction_envelope_id">Envelope</label>
+        <div id="transaction_envelope_id_container">
+          <select id="transaction_envelope_id" name="transaction[envelope_id]"></select>
+        </div>
+        <label for="transaction_notes">Notes</label>
+        <input type="text" id="transaction_notes" name="transaction[notes]"/>
+        <input type="hidden" name="_method" value="patch"/>
+        <input id="save_transaction" data-theme="b" type="submit" data-rel="back" value="Save" />
+      </form>
+      <a data-role="button" data-rel="back">Cancel</a>    
+    </div><!-- /content -->
+  </div><!-- /page -->
+  <div id="edit_transaction_associated" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h1>Edit Transaction</h1>
+    </div><!-- /header -->
+    <div data-role="content"> 
+       <p>This transaction is an allocation, transfer or split transaction and can only be edited from the desktop website.</p>
+       <a data-role="button" data-rel="back">Ok</a>  
     </div>
+  </div>
+  <div id="accounts" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a data-role="button" data-icon="power" href="#login" class="ui-btn-right logout">
+        Logout
+      </a>
+      <h1>Accounts</h1>
+    </div><!-- /header -->
     <div data-role="content"> 
       <ul id="account-list" data-role="listview">
        <!-- populated with json -->
-      </ul>
-    </div><!-- /content -->
+     </ul>
+   </div><!-- /content -->
+   <div data-role="footer" data-position="fixed" data-theme="d"> 
+      <div data-role="navbar"> 
+        <ul> 
+          <li><a href="#envelopes" data-icon="email">Envelopes</a></li> 
+          <li><a href="#accounts" class="ui-btn-active ui-state-persist" data-icon="page">Accounts</a></li> 
+        </ul> 
+      </div> 
+    </div> 
   </div><!-- /page -->
-  <script src="js/jquery-1.10.2.min.js"></script>
-  <script src="js/underscore-min.js"></script>
-  <script type='application/javascript' src="js/fastclick.js"></script>
-  <script src="js/application.js"></script>
-  <script type="text/javascript">
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script type='application/javascript' src="js/fastclick.js"></script>
+<script src="js/application.js"></script>
+<script type="text/javascript">
   app.init();
-  </script>
-  <!--<script type="text/javascript" src="cordova.js"></script>-->
-  <script src="jqm/jquery.mobile-1.3.2.js"></script>
+</script>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="jqm/jquery.mobile-1.3.2.js"></script>
 </body>
 </html>
