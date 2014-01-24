@@ -70,8 +70,8 @@ var app = {
     //envelopes
     $(document).on("pageshow", "#envelopes", function () {
       $.getJSON(app.url + "envelopes", function(data) {
+       app.populateEnvelopeSelect(data);
        var grouped = _.groupBy(data, function(e){ return e.envelope_group.name });
-       app.populateEnvelopeSelect(grouped);
        var items = [];
        _.each(grouped, function(value, key, list) {
         if (value[0].envelope_group.is_global == false){
@@ -191,17 +191,17 @@ var app = {
         $('#transaction-list').empty().append(items.join('')).listview('refresh');
       });
   },
-  populateEnvelopeSelect: function(grouped_envelopes){
+  populateEnvelopeSelect: function(envelopes){
     if (!app.envelope_select_populated) {
+
      var items = [];
-     _.each(grouped_envelopes, function(value, key, list) {
-      if (value[0].envelope_group.is_global == false){
-        items.push('<optgroup label="' + key + '">');
-      }
-      _.each(value, function(envelope, key, list) {
+     _.each(envelopes, function(envelope, key, list) {
+      if (envelope.envelope_group.is_global) {
         items.push('<option value="' + envelope.id + '">' + envelope.name + '</option>');
-      });
-    });
+      } else {
+        items.push('<option value="' + envelope.id + '">' + envelope.envelope_group.name + '/' + envelope.name + '</option>');
+      }
+     });
      $('#transaction_envelope_id').append(items.join(''));
      app.envelope_select_populated = true;
    }
@@ -209,8 +209,12 @@ var app = {
  onPageHide: function(e){
     $("div[data-role='header'] a.ui-btn-active").removeClass("ui-btn-active"); //fix wierd issue with ui-btn-active hanging on
   },
-  onPageChange: function(e){
+ onPageChange: function(e){
    FastClick.attach(document.body);
    $.mobile.defaultPageTransition = 'none';
+ },
+ openURL: function(urlString){
+    myURL = encodeURI(urlString);
+    window.open(myURL, '_blank');
  }
 };

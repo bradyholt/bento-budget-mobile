@@ -6,4 +6,17 @@
 /Users/bholt/dev/bento-mobile/platforms/android/bin/classes/com/mobile/bentobudget/R$string.class \
 /Users/bholt/dev/bento-mobile/platforms/android/bin/classes/com/mobile/bentobudget/R$xml.class \
 /Users/bholt/dev/bento-mobile/platforms/android/bin/classes/com/mobile/bentobudget/R.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$5.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/Users/bholt/dev/bento-mobile/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
 /Users/bholt/dev/bento-mobile/platforms/android/bin/dexedLibs/cordova-3.1.0-f0ed511cc7f30c005e23b5d152600d02.jar \

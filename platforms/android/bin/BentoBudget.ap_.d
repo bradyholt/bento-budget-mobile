@@ -58,7 +58,10 @@
 /Users/bholt/dev/bento-mobile/platforms/android/assets/www/js/jquery.mobile-1.3.2.js \
 /Users/bholt/dev/bento-mobile/platforms/android/assets/www/js/jquery.mobile-1.3.2.min.js \
 /Users/bholt/dev/bento-mobile/platforms/android/assets/www/js/underscore-min.js \
+/Users/bholt/dev/bento-mobile/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser \
 /Users/bholt/dev/bento-mobile/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
+/Users/bholt/dev/bento-mobile/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www \
+/Users/bholt/dev/bento-mobile/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www/InAppBrowser.js \
 /Users/bholt/dev/bento-mobile/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www \
 /Users/bholt/dev/bento-mobile/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/Connection.js \
 /Users/bholt/dev/bento-mobile/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/network.js \

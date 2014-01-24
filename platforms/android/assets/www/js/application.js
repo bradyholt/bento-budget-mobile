@@ -209,8 +209,12 @@ var app = {
  onPageHide: function(e){
     $("div[data-role='header'] a.ui-btn-active").removeClass("ui-btn-active"); //fix wierd issue with ui-btn-active hanging on
   },
-  onPageChange: function(e){
+ onPageChange: function(e){
    FastClick.attach(document.body);
    $.mobile.defaultPageTransition = 'none';
+ },
+ openURL: function(urlString){
+    myURL = encodeURI(urlString);
+    window.open(myURL, '_blank');
  }
 };
